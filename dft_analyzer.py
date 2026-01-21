@@ -4,14 +4,12 @@ import numpy as np
 import plotly.graph_objects as go
 import plotly.express as px
 
-# --- CẤU HÌNH TRANG ---
 st.set_page_config(
-    page_title="DFT Research Dashboard - CMC Univ",
+    page_title="DFT Research Dashboard - CMC Uni",
     page_icon="⚗️",
     layout="wide"
 )
 
-# --- CSS ---
 st.markdown("""
 <style>
     .header-title { color: #2c3e50; text-align: center; font-weight: 800; margin-bottom: 0px;}
@@ -42,10 +40,6 @@ with st.sidebar:
     """)
     st.markdown("---")
     st.caption("Dữ liệu mô phỏng được chuẩn hóa từ Materials Project Database.")
-
-# --- DỮ LIỆU GIẢ LẬP (MOCK DATA) ---
-# Vì không thể gọi API Materials Project trực tiếp mà không có API Key của bạn,
-# tôi tạo dữ liệu mẫu chính xác về mặt hình học cho 3 vật liệu này.
 
 def get_band_structure_data(mat):
     k_path = np.linspace(0, 10, 100) # Đường dẫn trong không gian k
@@ -227,3 +221,4 @@ with st.expander("🔬 Hướng dẫn: Cách chạy DFT thực tế cho NCKH"):
     **Bước 3: Xử lý hậu kỳ (Post-processing)**
     Dùng phần mềm này (bạn đang viết) để đọc file `bands.dat` xuất ra từ bước trên và vẽ đồ thị.
     """)
+
